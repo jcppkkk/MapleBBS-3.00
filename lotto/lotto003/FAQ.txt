@@ -1,0 +1,33 @@
+post_open.c make不出來 ?
+post_open.c  其實是由account.c裡面改出來的!
+由於account.c 是每小時會run一次, 
+且會統計BBS上各項事物後post上所對應的版!
+那lotto只有開獎後才須要ㄚ!
+
+so我就把post_open.c從account.c修改後獨立出來,
+就在開獎後run....另一方面也可以避免弄掉BBS版本不
+一樣的系統的account.c
+
+若您的post_open make不出來的話~..
+以下方法給您做參考:
+
+把您的 
+
+/> cd ~/src/util/statool
+~/src/util/statool/> cp account.c post_open.c
+
+再edit post_open.c
+到最下面的 main()
+
+在宣告函式之後的程式全都刪掉!
+並參考 account.c裡 是否有類似keeplog()的函式,
+這是一個可以把某個檔post上某個板的函式..
+
+再加入:
+         keeplog("lotto/lotto_open.txt", "Lotto.", "[七七樂透站開獎] 中獎名單");
+         keeplog("lotto/lotto_stat.txt", "Lotto.", "[七七樂透站開獎] 開獎統計");
+         exit(0);
+
+
+就這樣....存檔後再編譯一下就可以了!
+

@@ -1,0 +1,13 @@
+#ps -ax | grep bbs | awk '{print $1}' | xargs kill -9
+#killall -9 in.zbbsd
+ipcrm -M 65536
+ipcrm -M 65537
+ipcrm -M 65538
+ipcrm -M 65539
+ipcrm -M 65540
+ipcrm -M 65541
+
+ipcrm -S 65536
+ipcrm -S 65537
+ipcrm -S 65538
+#/home/bbs/bin/repasswd
