@@ -12,11 +12,11 @@ RANLIB	= ranlib
 OSTYPE := $(shell uname -s)
 ifeq ($(OSTYPE),FreeBSD)
 	CPROTO	= cproto -E"gcc -pipe -E" # -s -v
-	override CFLAGS	+= -O3 -s -pipe -fomit-frame-pointer -Wunused -I../include -D FREEBSD
+	override CFLAGS	+= -O3 -s -pipe -fomit-frame-pointer -Wall -Werror -I../include -D FREEBSD
 endif
 ifeq ($(OSTYPE),Linux)
 	CPROTO	:= cproto -E"gcc -pipe -E" # -s -v
-	override CFLAGS	= -O3 -s -pipe -fomit-frame-pointer -Wunused -I../include -D LINUX
+	override CFLAGS	= -O3 -s -pipe -fomit-frame-pointer -Wall -Werror -I../include -D LINUX
 endif
 UNAME_P := $(shell uname -p)
 ifeq ($(UNAME_P),x86_64)
