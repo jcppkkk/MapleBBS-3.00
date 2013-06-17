@@ -1,52 +1,32 @@
 # ------------------------------------------------------- #
-#  util/Makefile	( NTHU CS MapleBBS Ver 2.36 )	  #
+#  util/Makefile	( NTHU CS MapleBBS Ver 2.36 )   	  #
 # ------------------------------------------------------- #
 #  target : Makefile for ALL				  #
-#  create : 95/03/29				 	  #
-#  update : 95/12/15				 	  #
 # ------------------------------------------------------- #
-BBSHOME=/home/bbs
+include include.mk
+DIRS += lib
+DIRS += WD
+DIRS += SO
+DIRS += util
+BUILDDIRS = $(DIRS:%=build-%)
+INSTALLDIRS = $(DIRS:%=install-%)
+CLEANDIRS = $(DIRS:%=clean-%)
 
-# freebsd , linux , solaris ... etc. (use by innbbsd)
-OSTYPE = freebsd
+all: $(BUILDDIRS)
+	$(MAKE) -C innbbsd $(OSTYPE)
 
-SUBDIR += lib
-SUBDIR += WD
-SUBDIR += SO
-SUBDIR += util
+$(DIRS): $(BUILDDIRS)
+$(BUILDDIRS):
+	$(MAKE) -C $(@:build-%=%)
 
-all:
-.for dir in ${SUBDIR}
-	@echo "####################"
-	@echo "make ${dir}"
-	@echo "####################"
-	@cd ${dir};make all
-.endfor
-	@echo "####################"
-	@echo "make innbbsd"
-	@echo "####################"
-	@cd innbbsd;make ${OSTYPE}
+# install subdir
+install: $(INSTALLDIRS) all
+	$(MAKE) -C innbbsd $(OSTYPE) install
+$(INSTALLDIRS):
+	$(MAKE) -C $(@:install-%=%) install
 
-install:
-.for dir in ${SUBDIR}
-	@echo "####################"
-	@echo "make ${dir}"
-	@echo "####################"
-	@cd ${dir};make install
-.endfor
-	@echo "####################"
-	@echo "make innbbsd"
-	@echo "####################"
-	@cd innbbsd;make ${OSTYPE} install
-
-clean:
-.for dir in ${SUBDIR}
-	@echo "####################"
-	@echo "clean ${dir}"
-	@echo "####################"
-	@cd ${dir};make clean
-.endfor
-	@echo "####################"
-	@echo "clean innbbsd"
-	@echo "####################"
-	@cd innbbsd;make clean
+# clean subdir
+clean: $(CLEANDIRS) 
+	make -C innbbsd clean
+	$(CLEANDIRS): 
+	$(MAKE) -C $(@:clean-%=%) clean

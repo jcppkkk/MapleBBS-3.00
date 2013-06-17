@@ -2,6 +2,7 @@
 /* file structure : set file path for boards/user home	 */
 /* ----------------------------------------------------- */
 
+#include <string.h>
 
 static void
 mak_fpath(str, key, name)

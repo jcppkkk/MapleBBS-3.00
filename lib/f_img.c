@@ -1,6 +1,7 @@
 #include "dao.h"
 #include <fcntl.h>
 #include <sys/stat.h>
+#include <stdlib.h>
 
 
 char *

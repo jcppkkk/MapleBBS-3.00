@@ -2,6 +2,7 @@
 #define	PASSLEN 14
 #endif
 
+#include <string.h>
 
 /* ----------------------------------------------------- */
 /* password encryption					 */

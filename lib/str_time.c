@@ -1,4 +1,5 @@
 #include <time.h>
+#include <stdio.h>
 
 
 static char datemsg[32];
