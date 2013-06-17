@@ -31,8 +31,8 @@ union overhead
   union overhead *ov_next;	/* when free */
   struct
   {
-    u_char ovu_magic;		/* magic number */
-    u_char ovu_index;		/* bucket # */
+    unsigned char ovu_magic;		/* magic number */
+    unsigned char ovu_index;		/* bucket # */
   }      ovu;
 #define	ov_magic	ovu.ovu_magic
 #define	ov_index	ovu.ovu_index

@@ -34,7 +34,6 @@
 
 /* I don't much care whether these are defined in sys/types.h--LAW */
 
-#define u_char unsigned char
 #define u_int unsigned int
 #define u_short unsigned short
 
@@ -53,8 +52,8 @@ union	overhead {
 	double	strut;			/* alignment problems */
 #endif
 	struct {
-		u_char	ovu_magic;	/* magic number */
-		u_char	ovu_index;	/* bucket # */
+		unsigned char	ovu_magic;	/* magic number */
+		unsigned char	ovu_index;	/* bucket # */
 #ifdef RCHECK
 		u_short	ovu_size;	/* actual block size */
 		u_int	ovu_rmagic;	/* range magic number */

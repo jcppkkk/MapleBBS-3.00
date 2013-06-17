@@ -28,5 +28,6 @@ $(INSTALLDIRS):
 # clean subdir
 clean: $(CLEANDIRS) 
 	make -C innbbsd clean
-	$(CLEANDIRS): 
+
+$(CLEANDIRS): 
 	$(MAKE) -C $(@:clean-%=%) clean

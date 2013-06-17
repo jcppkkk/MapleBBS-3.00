@@ -20,7 +20,7 @@ dns_addr(name)
   char *name;
 {
   ip_addr addr;
-  u_char *cp, *eom;
+  char *cp, *eom;
   int cc, n, type, ancount, qdcount;
   querybuf ans;
   char hostbuf[MAXDNAME];
@@ -57,8 +57,8 @@ dns_addr(name)
 
   /* find first satisfactory answer */
 
-  cp = (u_char *) & ans + sizeof(HEADER);
-  eom = (u_char *) & ans + n;
+  cp = (char *) & ans + sizeof(HEADER);
+  eom = (char *) & ans + n;
 
   for (qdcount = ntohs(ans.hdr.qdcount); qdcount--; cp += n + QFIXEDSZ)
   {
@@ -69,7 +69,7 @@ dns_addr(name)
   ancount = ntohs(ans.hdr.ancount);
   while (--ancount >= 0 && cp < eom)
   {
-    if ((n = dn_expand((u_char *)&ans, eom, cp, hostbuf, MAXDNAME)) < 0)
+    if ((n = dn_expand((unsigned char *)&ans, eom, cp, hostbuf, MAXDNAME)) < 0)
       return INADDR_NONE;
 
     cp += n;

@@ -1,4 +1,5 @@
 #include <string.h>
+#include <ctype.h>
 
 int
 is_fname(str)
@@ -12,8 +13,9 @@ is_fname(str)
 
   do
   {
-    if (!is_alnum(ch) && !strchr("-._/+@", ch))
+    if (!isalnum(ch) && !strchr("-._/+@", ch))
       return 0;
-  } while (ch = *++str);
+    ch = *++str;
+  } while (ch);
   return 1;
 }

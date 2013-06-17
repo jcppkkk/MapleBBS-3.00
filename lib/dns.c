@@ -14,7 +14,7 @@ void
 dns_init()
 {
   res_init();
-  /* _res.retrans = 5; /* DNS query timeout */
+  // _res.retrans = 5; /* DNS query timeout */
   _res.retry = 2;
   _res.options |= RES_USEVC;
 }
@@ -28,12 +28,12 @@ dns_query(name, qtype, ans)
 {
   querybuf buf;
 
-  qtype = res_mkquery(QUERY, name, C_IN, qtype, (char *) NULL, 0, NULL,
-    (char *) &buf, sizeof(buf));
+  qtype = res_mkquery(QUERY, name, C_IN, qtype, NULL, 0, NULL,
+    (unsigned char *) (&buf), sizeof(buf));
 
   if (qtype >= 0)
   {
-    qtype = res_send((char *) &buf, qtype, (char *)ans, sizeof(querybuf));
+    qtype = res_send((unsigned char *) &buf, qtype, (unsigned char *)ans, sizeof(querybuf));
 
     /* avoid problems after truncation in tcp packets */
 

@@ -29,8 +29,8 @@ dns_mx(domain, mxlist)
 
   /* find first satisfactory answer */
 
-  cp = (u_char *) & ans + sizeof(HEADER);
-  eom = (u_char *) & ans + n;
+  cp = (unsigned char *) & ans + sizeof(HEADER);
+  eom = (unsigned char *) & ans + n;
 
   for (qdcount = ntohs(ans.hdr.qdcount); qdcount--; cp += n + QFIXEDSZ)
   {
@@ -43,7 +43,7 @@ dns_mx(domain, mxlist)
 
   while (--ancount >= 0 && cp < eom)
   {
-    if ((n = dn_expand((u_char *)&ans, eom, cp, mxlist, MAXDNAME)) < 0)
+    if ((n = dn_expand((unsigned char *)&ans, eom, cp, mxlist, MAXDNAME)) < 0)
       break;
 
     cp += n;
@@ -56,7 +56,7 @@ dns_mx(domain, mxlist)
     {
       /* pref = getshort(cp); */
       *mxlist = '\0';
-      if ((dn_expand((u_char *)&ans, eom, cp + 2, mxlist, MAXDNAME)) < 0)
+      if ((dn_expand((unsigned char *)&ans, eom, cp + 2, mxlist, MAXDNAME)) < 0)
 	break;
 
       if (!*mxlist)

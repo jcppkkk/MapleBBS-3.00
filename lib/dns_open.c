@@ -51,8 +51,8 @@ dns_open(host, port)
 
   /* find first satisfactory answer */
 
-  cp = (u_char *) & ans + sizeof(HEADER);
-  eom = (u_char *) & ans + n;
+  cp = (unsigned char *) & ans + sizeof(HEADER);
+  eom = (unsigned char *) & ans + n;
 
   for (qdcount = ntohs(ans.hdr.qdcount); qdcount--; cp += n + QFIXEDSZ)
   {
@@ -64,7 +64,7 @@ dns_open(host, port)
 
   while (--ancount >= 0 && cp < eom)
   {
-    if ((n = dn_expand((u_char *)&ans, eom, cp, buf, MAXDNAME)) < 0)
+    if ((n = dn_expand((unsigned char *)&ans, eom, cp, buf, MAXDNAME)) < 0)
       return -1;
 
     cp += n;

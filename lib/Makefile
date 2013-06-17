@@ -15,7 +15,7 @@ include ../include.mk
 HDR =	dao.h dao.p
 
 SRC =	\
-		is_alnum.c is_alpha.c is_fname.c is_fpath.c not_addr.c \
+		is_alpha.c is_fname.c is_fpath.c not_addr.c \
 		\
 		dns.c dns_addr.c dns_name.c dns_smtp.c dns_ident.c dns_open.c \
 		\
@@ -47,7 +47,7 @@ SRC =	\
 		b_suckinfile.c url_encode.c Link.c
 
 OBJ =	\
-		is_alnum.o is_alpha.o is_fname.o is_fpath.o not_addr.o \
+		is_alpha.o is_fname.o is_fpath.o not_addr.o \
 		\
 		dns.o dns_addr.o dns_name.o dns_smtp.o dns_ident.o dns_open.o \
 		\
@@ -82,7 +82,7 @@ OBJ =	\
 	$(CC) $(CFLAGS) -c $*.c
 
 
-all:	libdao.a
+all: dao.p libdao.a
 
 install:	all
 
@@ -96,7 +96,7 @@ libdao.a:	$(OBJ)
 
 
 clean:
-	rm -fr $(GARBAGE) $(OBJ) libdao.a *.bak *.BAK *~
+	rm -fr $(GARBAGE) $(OBJ) libdao.a dao.p *.bak *.BAK *~
 
 
 tags:

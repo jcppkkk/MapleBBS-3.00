@@ -1,5 +1,5 @@
 #define	STRICT_FQDN_EMAIL
-
+#include <ctype.h>
 
 int
 not_addr(addr)
@@ -9,7 +9,7 @@ not_addr(addr)
 
   mode = -1;
 
-  while (ch = *addr)
+  while ((ch = *addr) != 0)
   {
     if (ch == '@')
     {
@@ -18,9 +18,9 @@ not_addr(addr)
     }
 
 #ifdef	STRICT_FQDN_EMAIL
-    else if ((ch != '.') && (ch != '-') && (ch != '_') && !is_alnum(ch))
+    else if ((ch != '.') && (ch != '-') && (ch != '_') && !isalnum(ch))
 #else
-    else if (!is_alnum(ch) && !strchr(".-_[]%!:", ch))
+    else if (!isalnum(ch) && !strchr(".-_[]%!:", ch))
 #endif
 
       return 1;

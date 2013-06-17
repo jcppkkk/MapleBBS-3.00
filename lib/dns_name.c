@@ -25,7 +25,7 @@ dns_name(addr, name)
   char qbuf[MAXDNAME];
   char hostbuf[MAXDNAME];
   int n, type, ancount, qdcount;
-  u_char *cp, *eom;
+  unsigned char *cp, *eom;
 
   sprintf(name, INADDR_FMT, addr[0], addr[1], addr[2], addr[3]);
 
@@ -38,8 +38,8 @@ dns_name(addr, name)
 
   /* find first satisfactory answer */
 
-  cp = (u_char *) & ans + sizeof(HEADER);
-  eom = (u_char *) & ans + n;
+  cp = (unsigned char *) & ans + sizeof(HEADER);
+  eom = (unsigned char *) & ans + n;
 
   for (qdcount = ntohs(ans.hdr.qdcount); qdcount--; cp += n + QFIXEDSZ)
   {
@@ -49,7 +49,7 @@ dns_name(addr, name)
 
   for (ancount = ntohs(ans.hdr.ancount); --ancount >= 0 && cp < eom; cp += n)
   {
-    if ((n = dn_expand((u_char *)&ans, eom, cp, hostbuf, MAXDNAME)) < 0)
+    if ((n = dn_expand((unsigned char *)&ans, eom, cp, hostbuf, MAXDNAME)) < 0)
       return n;
 
     cp += n;
@@ -59,7 +59,7 @@ dns_name(addr, name)
 
     if (type == T_PTR)
     {
-      if ((n = dn_expand((u_char *)&ans, eom, cp, hostbuf, MAXDNAME)) >= 0)
+      if ((n = dn_expand((unsigned char *)&ans, eom, cp, hostbuf, MAXDNAME)) >= 0)
       {
 	strcpy(name, hostbuf);
 	return 0;
