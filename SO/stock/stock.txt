@@ -1,0 +1,14 @@
+http://www.gcsc.com.tw/grand1/stock/otc.htm
+http://kline.polaris.com.tw/www/kline/close_cal.htm
+http://www.marbo.com.tw/all-list.htm
+
+
+
+      do i=1,name,1
+       read(10,15) string(i),string1(i),price(i),price1(i)
+       write(20,25) '|',string(i),string1(i),'|',
+     &     price(i),price1(i),'|'
+      enddo
+                                                                                  
+15    format(A4,3X,A6,3X,A3,1X,A2,A1)
+25    format(A1,A4,1X,A6,A1,4X,A3,A2,A1)

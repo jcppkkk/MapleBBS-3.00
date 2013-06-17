@@ -1,0 +1,559 @@
+     1	18:09	cd innd/
+     2	18:09	dir
+     3	18:09	more nodelist.bbs
+     4	18:10	dir
+     5	18:10	dir
+     6	18:10	more *
+     7	18:10	dir
+     8	18:11	more news.cs.nthu.edu.tw
+     9	18:11	cd ..
+    10	18:11	dir
+    11	18:11	cd boards
+    12	18:11	dir
+    13	18:11	cd K8-gaseity/
+    14	18:11	dir
+    15	18:11	more .DIR
+    16	18:11	dor
+    17	18:11	dir
+    18	18:11	more .DIR.lock
+    19	18:11	more .DIR.old
+    20	18:11	cd ..
+    21	18:11	dir
+    22	18:30	cd ..
+    23	18:30	cd src
+    24	18:30	cd util
+    25	18:30	ve account.c
+    26	18:37	grep history *
+    27	18:37	grep history *.c
+    28	18:38	ve account.c
+    29	18:41	make
+    30	18:41	ve account.c
+    31	18:42	make
+    32	18:43	dir
+    33	18:43	cd
+    34	18:43	cd -
+    35	18:43	cp account ~/bin
+    36	18:43	cd
+    37	18:43	dir
+    38	18:43	cd ptt
+    39	18:43	cd home
+    40	18:43	cd ptt
+    41	18:43	dir
+    42	18:43	cd Ptt
+    43	18:43	dir
+    44	18:44	more *
+    45	18:45	cd
+    46	18:45	rm .history
+    47	18:45	dir
+    48	18:45	history
+    49	18:45	dir
+    50	18:45	more .history
+    51	18:45	exit
+    52	18:45	more .history
+    53	18:45	rm .history
+    54	18:47	cd src
+    55	18:48	cd util
+    56	18:48	pico accoumt.c
+    57	18:50	dir
+    58	18:50	cd ..
+    59	18:50	cd ..
+    60	18:50	cd etc
+    61	18:50	ve head
+    62	18:51	cd
+    63	18:51	cd etc
+    64	18:51	dir
+    65	18:51	cd
+    66	18:51	cd src
+    67	18:51	cd maple
+    68	18:51	ve admin.c
+    69	18:53	ve user.c
+    70	18:54	exit
+    71	18:54	cd src
+    72	18:54	cd maple
+    73	18:54	grep 確定 *.c
+    74	18:56	grep 請您確定 *.c
+    75	18:57	grep 請您確定 *.h
+    76	18:57	grep MSG_SURE_NY *.c
+    77	18:57	grep MSG_SURE_NY *.h
+    78	18:58	grep msg_sure_ny *.h
+    79	18:58	grep msg_sure_ny *.c
+    80	18:58	ve user.c
+    81	19:02	cd
+    82	19:02	ls -al temp
+    83	19:02	cd etc
+    84	19:02	dir
+    85	19:02	cd ..
+    86	19:02	dir
+    87	19:02	history
+    88	19:03	history > temp
+    89	19:03	more temp
+    90	19:03	rm temp
+    91	19:03	pico .logout
+    92	19:03	exit
+    93	19:43	exit
+    94	19:48	jobs
+    95	19:49	exit
+    96	20:34	cd src
+    97	20:34	cd util
+    98	20:34	pico poststat.c
+    99	20:34	ve poststat.c
+   100	20:43	exit
+   101	0:20	bo
+   102	0:20	cd boards/
+   103	0:21	ls
+   104	0:21	cd Note/
+   105	0:21	ls
+   106	0:22	cd ..
+   107	0:22	cd ..
+   108	0:22	cd man
+   109	0:22	ls
+   110	0:22	cd boards/
+   111	0:22	cd Note/
+   112	0:22	ls
+   113	0:23	rm M.848505522.A
+   114	0:25	pico S.849457132.A
+   115	0:25	ls
+   116	0:25	ln -s
+   117	0:25	ln --help
+   118	0:26	ln -s /home/bbs/man/boards/sky/M.849437089.A M.848505522.A
+   119	0:26	ls
+   120	0:27	pico M.848505522.A
+   121	0:27	ls
+   122	0:28	rm M.848505522.A
+   123	0:28	ln -s /home/bbs/man/boards/sky/ M.849457094.A M.848505522.A
+   124	0:28	ln -s /home/bbs/man/boards/sky/M.849457094.A M.848505522.A
+   125	0:28	ls
+   126	0:29	pico M.848505522.A
+   127	0:29	ls
+   128	0:29	cd ..
+   129	0:29	cd sky
+   130	0:29	ls
+   131	0:30	cd ..
+   132	0:30	cd Note/
+   133	0:30	ls
+   134	0:30	rm M.848505522.A
+   135	0:30	ln -s /home/bbs/man/boards/sky/D.846253447.A/M.849457094.A M.848505522.A
+   136	0:35	ls
+   137	0:35	cd ..
+   138	0:35	ls
+   139	0:35	cd ..
+   140	0:35	ls
+   141	0:35	cd ..
+   142	0:35	cd src
+   143	0:35	ls
+   144	0:35	cd util/
+   145	0:35	ls
+   146	0:35	pico account.c
+   147	0:36	ls
+   148	0:36	cd ..
+   149	0:36	crontab -e
+   150	0:37	time
+   151	0:37	time
+   152	0:37	tim
+   153	0:37	time
+   154	0:37	time
+   155	0:37	time
+   156	0:37	time
+   157	0:37	time
+   158	0:37	time
+   159	0:37	set time
+   160	0:37	date
+   161	0:37	exit
+   162	2:01	ls
+   163	2:01	cd src
+   164	2:01	ls
+   165	2:01	cd ..
+   166	2:01	cd innd/
+   167	2:01	ls
+   168	2:01	pico ntucsz.csie.ntu.edu.tw.active
+   169	2:01	pico newsfeeds.bbs
+   170	2:02	ps
+   171	2:02	w
+   172	2:02	w
+   173	2:02	ls
+   174	2:02	cdict
+   175	2:03	cd/
+   176	2:03	cd /
+   177	2:03	ls
+   178	2:03	cd tmp/
+   179	2:03	ls
+   180	2:03	big2
+   181	2:03	exit
+   182	2:03	crontab -e
+   183	2:04	cd bin
+   184	2:04	big2d
+   185	2:06	w
+   186	2:07	ls
+   187	2:07	w
+   188	2:07	ks
+   189	2:07	ls
+   190	2:07	cd ..
+   191	2:07	ls
+   192	2:07	cd src/
+   193	2:07	ls
+   194	2:07	cd sob-util/
+   195	2:07	ls
+   196	2:08	vf..
+   197	2:08	ld
+   198	2:08	make
+   199	2:09	pico Makefile
+   200	2:09	rm bguard.c
+   201	2:09	make
+   202	2:09	ls
+   203	2:10	cp ../util/account.c .
+   204	2:10	make
+   205	2:11	cp ../util/bbsmail
+   206	2:11	cp ../util/bbsmail .
+   207	2:11	make
+   208	2:11	ls
+   209	2:12	pico Makefile
+   210	2:12	make
+   211	2:13	ls
+   212	2:13	cd ..
+   213	2:13	ls
+   214	2:13	cd util/
+   215	2:13	ls
+   216	2:13	cd ~testbbs
+   217	2:13	ls
+   218	2:13	cd src/
+   219	2:13	cd util/
+   220	2:13	ls
+   221	2:14	ls -la
+   222	2:14	ls
+   223	2:14	mob
+   224	2:14	mso
+   225	2:14	msp
+   226	2:14	ls
+   227	2:14	buildnames
+   228	2:15	exit
+   229	13:08	ls
+   230	13:08	rm core
+   231	13:08	ls
+   232	13:08	cd src/
+   233	13:08	cd rti
+   234	13:08	cd util/
+   235	13:08	ls
+   236	13:09	pico pico account.c
+   237	13:09	picoaccount.c
+   238	13:09	pico account.c
+   239	13:11	make
+   240	13:12	make
+   241	13:12	make clean
+   242	13:12	make
+   243	13:14	ls
+   244	13:14	cp account ~/bine
+   245	13:14	cp account ~/bin
+   246	13:14	cd ..
+   247	13:14	cd ..
+   248	13:14	ls
+   249	13:14	account
+   250	13:14	rm bine
+   251	13:14	ls
+   252	13:14	cd bin
+   253	13:14	account
+   254	13:14	exit
+   255	17:11	cd innd/
+   256	17:11	pico newsfeeds.bbs
+   257	17:11	pico newsfeeds.bbs
+   258	17:12	pico ntucsz.csie.ntu.edu.tw.active
+   259	17:12	ps
+   260	17:12	ls
+   261	17:12	innbbsd
+   262	17:12	cd ..
+   263	17:12	cd bin
+   264	17:12	big2d
+   265	17:12	ls
+   266	17:13	xchatd
+   267	17:13	cd ..
+   268	17:13	ls
+   269	17:13	cd innd/
+   270	17:13	rm ntucsz.csie.ntu.edu.tw.active
+   271	17:13	ls
+   272	17:13	cp ntucsz.csie.ntu.edu.tw.active.BAK ntucsz.csie.ntu.edu.tw.active
+   273	17:13	pcio ntucsz.csie.ntu.edu.tw.active
+   274	17:13	pico ntucsz.csie.ntu.edu.tw.active
+   275	17:13	cd ..
+   276	17:13	rm ntucsz.csie.ntu.edu.tw.active.lock
+   277	17:13	ls
+   278	17:14	rm magic.m7.ntu.edu.tw.lock
+   279	17:14	rm netnews.ntu.edu.tw.actives.lock
+   280	17:14	ls
+   281	17:14	rm news.cs.nthu.edu.tw.lock
+   282	17:14	ls
+   283	17:14	cron -e
+   284	17:14	crontab -e
+   285	17:15	ps
+   286	17:15	ps
+   287	17:15	ps -la
+   288	17:15	ps -laux
+   289	17:15	exit
+   290	19:31	set
+   291	19:31	cd etc
+   292	19:31	ls
+   293	19:31	cp Welcome Welcome.bak
+   294	19:32	exit
+   295	19:57	cd man/
+   296	19:57	cd boards/
+   297	19:57	cd SYSOP/
+   298	19:57	ls
+   299	19:57	ls -la
+   300	19:57	rm S.849526829.A
+   301	19:57	ls
+   302	19:58	rm M.849527781.A
+   303	19:58	lh /home/bbs/etc/Welcome M.849527781.A
+   304	19:58	ln -s /home/bbs/etc/Welcome M.849527781.A
+   305	19:59	rm M.849527936.A
+   306	19:59	ln -s /home/bbs/etc/Welcome_login M.849527936.A
+   307	20:05	exit
+   308	22:59	cd src
+   309	22:59	cd util
+   310	22:59	ve account.c
+   311	23:04	cd
+   312	23:04	cd src
+   313	23:04	cd maple
+   314	23:04	ve admin.c
+   315	23:09	make update
+   316	23:10	bbs1
+   317	23:13	cd ..
+   318	23:13	cd util
+   319	23:13	ve account.c
+   320	23:21	crontab -l
+   321	23:21	crontab -l | more
+   322	23:21	ve account.c
+   323	23:26	make
+   324	23:27	dir
+   325	23:27	cp account ~/bin
+   326	23:27	cd
+   327	23:27	cd bin
+   328	23:27	account
+   329	23:29	cd
+   330	23:32	cd src
+   331	23:32	cd maple
+   332	23:32	grep sex *.c
+   333	23:32	ve bbs.c
+   334	23:33	grep guest *.c
+   335	23:34	grep guest *.h
+   336	23:34	grep GUEST *.c
+   337	23:38	bbsrf
+   338	23:38	cd
+   339	23:38	cd bin
+   340	23:38	rm bbs1
+   341	23:38	cd maple
+   342	23:38	cd src
+   343	23:38	cd
+   344	23:38	cd src
+   345	23:38	cd maple
+   346	23:38	cp bbs1 ~/bin
+   347	23:38	bbsrf
+   348	23:39	bbsrf
+   349	23:42	cd src
+   350	23:42	cd maple
+   351	23:42	grep 美眉 *.c
+   352	23:43	ve user.c
+   353	23:47	ve
+   354	23:47	qq
+   355	23:47	exit
+   356	23:48	cd src
+   357	23:48	cd maple
+   358	23:48	grep 真實姓名 *.c
+   359	23:48	ve register.c
+   360	0:01	exit
+   361	2:48	cd src
+   362	2:48	cd maple/
+   363	2:48	ls
+   364	2:48	grep MODE_DIGEST
+   365	2:48	grep MODE_DIGEST *
+   366	2:48	pico modes.h
+   367	2:51	ls
+   368	3:07	pico edit.c
+   369	3:07	pico main.c
+   370	3:08	pico edit.c
+   371	3:08	grep i_read *
+   372	3:08	grep read.c *
+   373	3:09	pico read.c
+   374	3:36	ls
+   375	3:52	exit
+   376	7:24	ps
+   377	7:24	w
+   378	7:24	ls
+   379	7:25	cd bin
+   380	7:25	ls
+   381	7:25	big2d
+   382	7:25	ls
+   383	7:25	cd ..
+   384	7:25	cd innd/
+   385	7:25	innbbsd
+   386	7:25	ls
+   387	7:25	ps
+   388	7:25	cd ..
+   389	7:25	cd bin
+   390	7:25	bbs
+   391	7:25	su
+   392	7:27	ls
+   393	7:27	cd bin
+   394	7:27	ls
+   395	7:27	big2d
+   396	7:27	ls
+   397	7:27	cd ..
+   398	7:27	cd innd/
+   399	7:27	innbbsd
+   400	7:27	ls
+   401	7:27	cd ..
+   402	7:27	cd bin
+   403	7:27	xchatd
+   404	7:27	exit
+   405	12:29	dir
+   406	12:29	more .temp
+   407	12:29	dir
+   408	12:29	more temp
+   409	12:29	more .temp
+   410	12:29	dir
+   411	12:29	dir
+   412	12:29	more .temp
+   413	12:29	ls -al .temp
+   414	12:29	dir
+   415	12:30	more .logout
+   416	12:30	cd
+   417	12:30	cd src
+   418	12:30	cd maple
+   419	12:30	cd ..
+   420	12:30	cd util
+   421	12:30	ve account.c
+   422	12:32	make
+   423	12:32	ve showuser.c
+   424	12:33	make
+   425	12:33	ve showuser.c
+   426	12:34	make
+   427	12:34	cd ..
+   428	12:35	cd maple
+   429	12:35	ve global.h
+   430	12:35	ve struct.h
+   431	12:35	grep my_ctime *.c
+   432	12:35	grep my_ctime *.h
+   433	12:36	man my_ctime
+   434	12:36	grep my_ctime *
+   435	12:36	cls
+   436	12:36	clear
+   437	12:36	grep my_ctime *.c
+   438	12:37	ve kaede.c
+   439	12:37	make
+   440	12:37	cd
+   441	12:37	cd src
+   442	12:37	cd util
+   443	12:37	make
+   444	12:38	ve showuer.c
+   445	12:38	ve showuser.c
+   446	12:40	make
+   447	12:40	ve showuser.c
+   448	12:40	cd ..
+   449	12:40	cd maple
+   450	12:40	ve struct.c
+   451	12:40	ve struct.h
+   452	12:41	cd
+   453	12:41	cd util
+   454	12:41	cd src
+   455	12:41	cd util
+   456	12:41	make
+   457	12:42	cp showuser ~/bin
+   458	12:42	cp topusr ~/bin
+   459	12:42	cp setuser ~/bin
+   460	12:42	cp shodur ~/bin
+   461	12:42	cp shodir ~/bin
+   462	12:42	cp showdir ~/bin
+   463	12:42	bbsrf
+   464	12:46	cd ..
+   465	12:46	cd maple
+   466	12:46	ve edit.c
+   467	12:47	set
+   468	12:47	exit
+   469	12:47	dir
+   470	12:47	more .temp
+   471	12:47	cls
+   472	12:47	clear
+   473	12:47	more .temp
+   474	12:48	cls
+   475	12:48	clear
+   476	12:48	cd src
+   477	12:48	cd maple
+   478	12:48	grep 真實姓名 *.c
+   479	12:48	grep 透露 *.c
+   480	12:48	ve bbs.c
+   481	12:56	make update
+   482	12:57	cd ~bin
+   483	12:57	rm bbs
+   484	12:57	cd
+   485	12:57	cd ~bin
+   486	12:57	dir
+   487	12:57	cd
+   488	12:57	cd ~/bin
+   489	12:57	rm bbs
+   490	12:57	cd -
+   491	12:57	cd src
+   492	12:57	cd maple
+   493	12:58	cp bbs ~/bin
+   494	12:58	bbsrf
+   495	13:00	ve bbs.c
+   496	13:03	make update
+   497	13:03	ve bbs.c
+   498	13:04	make update
+   499	13:05	rm ~/bin/bbs
+   500	13:05	cp bbs ~/bin
+   501	13:05	cd -
+   502	13:05	cd -
+   503	13:05	bbsrf
+   504	13:07	ve bbs.c
+   505	13:08	make update
+   506	13:09	ve Makefile
+   507	13:11	make update
+   508	13:11	pico Makefile
+   509	13:11	a
+   510	13:11	cd ..
+   511	13:11	cd ..
+   512	13:11	cd backup
+   513	13:11	dir
+   514	13:11	cd src1121
+   515	13:11	cp Makefile ~/src/maple
+   516	13:11	cd
+   517	13:11	cd src
+   518	13:11	cd maple
+   519	13:11	pico Makefile
+   520	13:11	make update
+   521	13:12	pico Makefile
+   522	13:12	make update
+   523	13:13	cp Makefile Makefile.old
+   524	13:13	bbsrf
+   525	13:16	cd src
+   526	13:16	ve bbs.c
+   527	13:19	make update
+   528	13:19	ve bbs.c
+   529	13:19	make update
+   530	13:20	bbsrf
+   531	13:21	ve bbs.c
+   532	13:23	exit
+   533	13:23	cd src
+   534	13:23	cd maple
+   535	13:23	grep 匿名 *.c
+   536	13:23	ve edit.c
+   537	13:26	ve bbs.c
+   538	13:26	make update
+   539	13:28	bbsrf
+   540	13:35	dir
+   541	13:35	ve edit.c
+   542	13:36	more edit.c
+   543	13:37	cat edit.c
+   544	13:37	exit
+   545	16:07	who
+   546	16:07	bbsrf
+   547	16:13	cd util
+   548	16:13	cd src
+   549	16:13	cd util
+   550	16:13	ls -al account.c
+   551	16:13	ls -al account
+   552	16:13	cd ~/bin
+   553	16:13	ls -al account
+   554	16:13	cd -
+   555	16:13	cd -
+   556	16:14	cd -
+   557	16:14	cp account ~/bin
+   558	16:14	bbsrf
+   559	16:18	exit

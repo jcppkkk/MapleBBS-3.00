@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Use with jenkins !! LOCALLY !!, copy post-commit to .git/hooks/post-commit
+
+repo_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd ../.. && pwd )"
+
+curl http://127.0.0.1:8080/git/notifyCommit?url=$repo_path

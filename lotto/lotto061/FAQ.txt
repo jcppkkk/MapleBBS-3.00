@@ -1,0 +1,83 @@
+77 lotto FAQ
+
+1.
+Q:post_open.c make不出來 ?
+A:post_open.c  其實是由account.c裡面改出來的!
+    由於account.c 是每小時會run一次, 
+  且會統計BBS上各項事物後post上所對應的版!
+  那lotto只有開獎後才須要ㄚ!
+
+    so我就把post_open.c從account.c修改後獨立出來,
+  就在開獎後run....另一方面也可以避免弄掉BBS版本不
+  一樣的系統的account.c
+
+  若您的post_open make不出來的話~..以下方法給您做參考:
+
+把您的 
+
+/> cd ~/src/util/statool
+~/src/util/statool/> cp account.c post_open.c
+
+再edit post_open.c
+到最下面的 main()
+
+在宣告函式之後的程式全都刪掉!
+並參考 account.c裡 是否有類似keeplog()的函式,
+這是一個可以把某個檔post上某個板的函式..
+
+再加入:
+         keeplog("lotto/lotto_open.txt", "Lotto.", "[七七樂透站開獎] 中獎名單");
+         keeplog("lotto/lotto_stat.txt", "Lotto.", "[七七樂透站開獎] 開獎統計");
+         exit(0);
+
+
+就這樣....存檔後再編譯一下就可以了!
+
+
+2.
+Q:為什麼我改完 lotto.h裡的#define LOTTO_GOLD_SILVER 1 後,
+  make clean install, 一切跑起來好像都很正常, 不過怎麼開獎時仍給了金幣?
+  尤其當我從0.3更新到0.5版後就這樣
+A:因為你沒有重新compile lotto_open這個開獎程式.
+  方法1: 到~/src/lotto 下再跑一次 install.sh
+  方法2: 到~/src/lotto 下跑 gcc -o /home/bbs/lotto/lotto_open lotto_open.c
+  其實上面兩者是一樣的! 只是方法2是單單update lotto_open,而方法一是全部
+  再update一次!
+
+3.
+Q:除了把lotto_no_now.txt砍掉這個關掉 lotto站的方法, 還有其它方法嗎:
+A:有.
+  當~/lotto/lotto_on_off.txt 的內容是"on"時, Lotto站是開著的
+  若不是 or 沒這個檔, 那Lotto站是關著的!
+
+4.
+Q:更新為0.5版後, 進入lotto遊戲時常會嚴重dely, 有時卻又不會..why?
+A:因為每個user進入時,程式會去讀取該user的簽賭狀況, 若當時系統上下注的
+  筆數很多時, 當然就必須要有點時間去處理了! 當你的CPU是Intel Pentium200,
+  10萬筆資料, 就會產生蠻久的delay了!
+  解決方法1: 更新硬體(sure, 升級)
+      方法2: 降低每個user可以下注數(edit lotto.h)
+      方法3: 等小弟寫出較好的程式
+      方法4: 就等您來修改程式嚕~...^_^
+
+  ....0.6版後此問題已經解決, 小弟已將以回路計算的方式改成檔案讀取的方式.
+
+5.
+Q:lotto_open無法在lotto.h限制user玩的時間裡跑完,晉而lotto_open還在跑,
+  但lotto_record.txt卻又已經有變動了...怎麼辦?
+A:lotto_open跑不完的確很傷腦筋, 我是以FreeBSD(/Linux)的 crontab再加上
+  0.3版新增的lotto_on_off.txt功能來做變通. 
+  方法: 0.5.2 版有新增了 lotto_run.sh及 lotto_close.sh,各是讓lotto_on_off.txt
+        的內容變成"on" or "off", 只要讓crontab在您覺得lotto_open跑得完的時間
+        適時跑這兩個script即可.
+	77bbs.com 主站的CPU為k6-2-400,128MB,開獎跑101.x萬筆資料,從星期五
+	晚上8:30跑到隔天凌晨3:55, 跑了約7.5小時....若您的CPU不夠猛的話.
+	快把user可下注最高上限調低吧!....
+
+  ****不過從0.6版後, lotto_open的機制有改善! 除lotto.h裡做好lotto開獎時段
+      設定之外, lotto_open開始run後就會把lotto_on_off.txt設為"off",等它
+      跑完後會設回"on"並post上開獎結果.
+  ****經天之驕子(163.20.163.9)sheng大大測試, 201006筆資料從8:30跑到9:59結束!
+      PIII-1G,384MB SDRAM,SCSI hdd...
+  ****0.6版後的lotto_open.c程式有較結構化,會跑得快一點點...
+

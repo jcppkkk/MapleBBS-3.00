@@ -1,0 +1,32 @@
+
+/src/SO
+	stock.c	這是股票的主程式,我修改了一東西
+		例如,股票的手續費,交易稅,都把他改成跟實際市場一樣..
+		交易時間,我也改成下午七點到淩晨四點....
+
+/bin
+	stock.sh 這是設定固定上網抓資料
+		 抓回來存在 /game/stock_now1
+
+/game
+	stock_name 股票的名字與代碼
+
+	stocktran.f 自己寫的小程式
+		    去讀stock_now1,轉格式輸出stock_now
+	我不會c,這是fortran的程式,編譯時請用 f77
+        ex. f77 stocktran.f 
+        就可以編譯出a.out的程式
+
+	stock_now1 stock.sh從WWW抓下來的股市資料
+
+	stock_now  stock.c讀的股市資料檔
+
+--------------------------------------------------------------
+crontab 的設定
+50 18 * * * bin/stock.sh > /dev/null 2>&1
+#每天5:50PM上網抓資料
+55 18 * * * game/stocktran > /dev/null 2>&1
+#每天5:55PM 跑轉格式的程式
+#stocktran是stocktran.f編譯出的執行檔
+
+						luogen 2001/4/6	
